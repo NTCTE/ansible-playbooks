@@ -3,4 +3,4 @@
   become: yes
   tasks:
     - name: Shutdown the machine
-      command: systemctl poweroff
+      command: sudo shutdown -P now
