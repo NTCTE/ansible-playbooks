@@ -1,6 +1,11 @@
 - name: Shutdown all hosts
   hosts: all
   become: yes
+  vars_files:
+    - ansible_sudo_pass
   tasks:
     - name: Shutdown the machine
-      command: sudo shutdown -P now
+      command: /sbin/shutdown -h now
+      become: yes
+      become_method: sudo
+      become_user: root
