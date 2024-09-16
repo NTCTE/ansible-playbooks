@@ -1,0 +1,5 @@
+- name: Execute a "Hello World" script
+  hosts: all
+  tasks:
+    - name: Run echo script
+      shell: echo "Hello, World!" > ./hello.txt
