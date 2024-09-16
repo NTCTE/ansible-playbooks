@@ -1,0 +1,5 @@
+- name: Execute a poweroff script
+  hosts: all
+  tasks:
+    - name: Run echo script
+      shell: sudo shutdown -P now
