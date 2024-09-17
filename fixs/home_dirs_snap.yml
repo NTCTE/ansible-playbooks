@@ -1,0 +1,9 @@
+- name: Fix the home directories of NFS users
+  hosts: all
+  become: yes
+  tasks:
+    - name: Make some bash scripting...
+      shell: snap set system homedirs=/nfs/home/
+      become: yes
+      become_method: sudo
+      become_user: root
