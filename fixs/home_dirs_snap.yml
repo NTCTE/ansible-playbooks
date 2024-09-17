@@ -4,6 +4,5 @@
   tasks:
     - name: Make some bash scripting...
       shell: snap set system homedirs=/nfs/home/
-      become: yes
       become_method: sudo
       become_user: root
