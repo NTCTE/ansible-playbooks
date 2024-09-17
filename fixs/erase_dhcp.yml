@@ -7,7 +7,6 @@
         path: /run/netplan/enp0s3.yaml
         state: absent
     - name: Commit changes in Netplan...
-      ansible.builtin.command:
-        cmd: netplan apply
-        become_method: sudo
-        become_user: root
+      command: netplan apply
+      become_method: sudo
+      become_user: root
