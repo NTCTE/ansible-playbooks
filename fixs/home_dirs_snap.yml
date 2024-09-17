@@ -3,8 +3,6 @@
   become: yes
   tasks:
     - name: Make some bash scripting...
-      community.general.snap:
-        name: system
-        options: homedirs=/nfs/home
+      shell: snap set system homedirs=/nfs/home/
       become_method: sudo
       become_user: root
