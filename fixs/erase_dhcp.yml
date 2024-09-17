@@ -1,0 +1,11 @@
+- name: Delete some noisly file and change network settings...
+  hosts: all
+  become: yes
+  tasks:
+    - name: Delete file...
+      ansible.builtin.file:
+        path: /run/netplan/enp0s3.yaml
+        state: absent
+    - name: Commit changes in Netplan...
+      ansible.builtin.command:
+        cmd: netplan apply
