@@ -9,3 +9,5 @@
     - name: Commit changes in Netplan...
       ansible.builtin.command:
         cmd: netplan apply
+        become_method: sudo
+        become_user: root
