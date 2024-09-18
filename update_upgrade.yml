@@ -1,0 +1,8 @@
+- name: Update and upgrade packages
+  become: true
+  apt:
+    upgrade: yes
+    upgrade_cache: yes
+    cache_valid_time: 86400
+    force: yes
+    autoremove: yes
